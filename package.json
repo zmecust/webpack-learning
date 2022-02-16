@@ -13,7 +13,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
     "@babel/runtime": "^7.7.1",
-    "export-xlsx": "^0.1.1",
+    "export-xlsx": "^0.1.4",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1"
   },

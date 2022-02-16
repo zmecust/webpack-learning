@@ -8,66 +8,77 @@ export const SETTINGS_FOR_EXPORT = {
     {
       sheetName: "example",
       startingRowNumber: 2,
-      gapBetweenTwoTables: 2,
       tableSettings: {
-        table2: {
-          importable: true,
+        data: {
           tableTitle: "Score",
-          notification: "Notify: only yellow background cell could edit!",
           headerGroups: [
             {
-              name: "Score",
-              key: "score"
-            }
+              name: '',
+              key: 'void',
+              groupKey: 'directions',
+            },
+            {
+              name: 'Science',
+              key: 'science',
+              groupKey: 'directions',
+            },
+            {
+              name: 'Directions',
+              key: 'directions',
+            },
           ],
           headerDefinition: [
             {
-              name: "Id",
-              key: "id",
-              width: 25,
-              hierarchy: true,
-              checkable: true
+              name: '#',
+              key: 'number',
             },
             {
-              name: "Number",
-              key: "number",
-              width: 18,
-              checkable: true,
-              style: { alignment: alignment.middleCenter }
+              name: 'Name',
+              key: 'name',
             },
             {
-              name: "Name",
-              key: "name",
-              width: 18,
-              style: { alignment: alignment.middleCenter }
+              name: 'SUM',
+              key: 'sum',
+              groupKey: 'void',
+              rowFormula: '{math}+{physics}+{chemistry}+{informatics}+{literature}+{foreignLang}',
             },
             {
-              name: "A",
-              key: "a",
-              width: 18,
-              groupKey: "score",
-              dataType: defaultDataType.number,
-              selfSum: true,
-              editable: true
+              name: 'Mathematics',
+              key: 'math',
+              groupKey: 'science',
             },
             {
-              name: "B",
-              key: "b",
-              width: 18,
-              groupKey: "score",
-              dataType: defaultDataType.number,
-              selfSum: true,
-              editable: true
+              name: 'Physics',
+              key: 'physics',
+              groupKey: 'science',
             },
             {
-              name: "Total",
-              key: "total",
-              width: 18,
-              dataType: defaultDataType.number,
-              selfSum: true,
-              rowFormula: "{a}+{b}"
+              name: 'Chemistry',
+              key: 'chemistry',
+              groupKey: 'science',
+            },
+            {
+              name: 'Informatics',
+              key: 'informatics',
+              groupKey: 'science',
+            },
+            {
+              name: 'Literature',
+              key: 'literature',
+              groupKey: 'science',
+            },
+            {
+              name: 'Foreign lang.',
+              key: 'foreignLang',
+              groupKey: 'science',
+            },
+            {
+              name: 'AVG',
+              key: 'avg',
+              groupKey: 'void',
+              rowFormula: '{sum}/6',
             }
-          ]
+          ],
         }
       }
     }
